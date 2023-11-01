@@ -1,0 +1,708 @@
+@import "./global";
+
+@mixin UseBg {
+  background-position: bottom center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+@mixin UseBg2 {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+@mixin DropDown {
+  top: 70px;
+  background: white;
+  box-shadow: 0 0 6px 1px #3e3e3e40;
+  margin: auto 4rem;
+}
+
+/*
+
+  ------------------------------
+   Navbar style
+    -----------------------------
+
+*/
+
+.nav_home_link {
+  img {
+    width: 100%;
+    height: 40px;
+  }
+}
+.toggle__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.__service__dropdown {
+  @include DropDown();
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      list-style: none;
+      width: 335px;
+      margin: 1rem 0;
+      padding: 0 0.5rem;
+      svg {
+        color: var(--primary);
+      }
+    }
+  }
+}
+.__technology__dropdown {
+  top: 70px;
+  .__technology__wrapper {
+    display: flex;
+    background: var(--white-primary);
+    box-shadow: 0 0 6px 1px #3e3e3e40;
+    padding: 2rem 0rem;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      svg {
+        color: var(--primary);
+      }
+    }
+  }
+}
+
+.__dropdown__ {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/*
+
+  ------------------------------ Navbar style -----------------------------
+
+*/
+
+/*
+
+
+  ------------------------------Hero/Banner -----------------------------
+
+*/
+
+// @media (max-width: 768px) {
+//   .__banner__sector {
+//     // height: calc(110vh);
+//   }
+// }
+// ----------------- animation ------------------------------
+
+.__area {
+  background: var(--white-primary) !important;
+  // background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  height: 100%;
+  width: 100%;
+  // height:100vh;
+  .__circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+      transition: 0.3s;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+
+  .__circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+
+  .__circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+
+  .__circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+  }
+
+  .__circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+
+  .__circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+  }
+
+  .__circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+  }
+
+  .__circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+  }
+
+  .__circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+
+  .__circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+
+  .__circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+}
+
+.__banner__carousel {
+  .slick-dots {
+    li {
+      background: var(--primary) !important;
+    }
+    .slick-active {
+      button {
+        background: #171943 !important;
+      }
+    }
+  }
+}
+.__banner__display {
+  // top: calc(50% - 120px);
+  left: 0;
+  right: 0;
+}
+.banner__content {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 400;
+  }
+}
+// ----------------- animation ------------------------------
+
+/*
+
+
+  ------------------------------Hero/Banner -----------------------------
+
+*/
+
+/*
+
+
+  ------------------------------ About -----------------------------
+
+*/
+
+.show__box {
+  img {
+    width: 30px;
+  }
+  h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    line-height: 1;
+    transition: 0.3s;
+  }
+  h4 {
+    margin: 0;
+    font-weight: 400;
+    color: rgb(48, 48, 48);
+    font-size: 0.7rem;
+  }
+  .show__single {
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 0 20px 2px #e3e3e3;
+      h2 {
+        color: var(--primary);
+      }
+    }
+  }
+}
+
+.__about__route__single {
+  box-shadow: 0 0 20px 2px #e3e3e3;
+  transition: all 0.3s;
+  h3 {
+    white-space: normal;
+    font-size: 0.8rem;
+  }
+  &:hover {
+    background: var(--primary);
+    h3 {
+      color: var(--white-primary);
+    }
+    ._rag {
+      background-color: white;
+    }
+  }
+}
+
+/*
+
+
+  ------------------------------About -----------------------------
+
+*/
+
+/*
+
+
+  ------------------------------Client -----------------------------
+
+*/
+
+.client__count {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+/*
+
+
+  ------------------------------Client -----------------------------
+
+*/
+
+/*
+
+
+  ------------------------------why us -----------------------------
+
+*/
+
+.__why__us {
+  @include UseBg();
+  .ant-tabs {
+    z-index: 10;
+    width: 100%;
+    .ant-tabs-nav {
+      border-top: 1px solid #f0f0f0;
+    }
+    .ant-tabs-tab {
+      padding: 1.5rem;
+      font-weight: 700;
+    }
+  }
+  ._why_us_img_box {
+    // box-shadow: 0 0 20px 2px #c4c4c4;
+    img {
+      box-shadow: 0 25px 18px rgba(0, 9, 68, 0.28);
+      border-radius: 2rem;
+    }
+  }
+}
+
+/*
+
+  ------------------------------why us -----------------------------
+
+*/
+
+/*
+
+  ------------------------------ Review -----------------------------
+
+*/
+.__review__img__box {
+  img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+.__review__card__parents {
+  box-shadow: 0 0 20px 2px #e3e3e3;
+}
+/*
+
+  ------------------------------ Review -----------------------------
+
+*/
+
+/*
+
+  ------------------------------ Company Review -----------------------------
+
+*/
+
+.__company__review {
+  @include UseBg();
+  background-attachment: fixed !important;
+  background-color: #4e54c8;
+  .play__button {
+    background: var(--white-primary);
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+/*
+
+  ------------------------------ Company Review -----------------------------
+
+*/
+
+/*
+
+  -------------------------- case studies ----------------------------
+
+*/
+.__case__studie__sector {
+  @include UseBg();
+  background-position: center center !important;
+}
+.__single__case__studie {
+  box-shadow: 0 0 20px 2px #e3e3e3;
+
+  img {
+    height: 310px;
+    object-fit: cover;
+  }
+}
+
+.__single__detail__img__box {
+  img {
+    box-shadow: 0 25px 18px rgba(0, 9, 68, 0.28);
+    border-radius: 2rem;
+  }
+}
+.case__img__box {
+  img {
+    height: 300px;
+  }
+}
+.__st__list {
+  position: relative;
+  &::before {
+    width: 14rem;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+    content: "";
+    z-index: 1;
+    display: inline-block;
+    height: 3.25rem;
+    position: absolute;
+  }
+  &::after {
+    width: 12rem;
+    content: "";
+    right: 0;
+    bottom: 0;
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    z-index: 1;
+    display: inline-block;
+    height: 3.25rem;
+    position: absolute;
+  }
+}
+
+/*
+
+  -------------------------- case studies ----------------------------
+
+*/
+
+/*
+
+  -------------------------- blogs ----------------------------
+
+*/
+.__cagatory__sec {
+  .ant-segmented {
+    border-radius: 2rem !important;
+  }
+  .ant-segmented-item {
+    border: 2px solid #e9e9e9;
+    border-radius: 2rem !important;
+    background: none;
+    margin-right: 1rem;
+  }
+  .ant-segmented-item-selected {
+    background: var(--primary);
+
+    .blog__count {
+      background: white;
+      color: var(--primary);
+    }
+    h5 {
+      color: white;
+    }
+  }
+  .blog__count {
+    background: var(--primary);
+    padding: 0 0.5rem;
+    border-radius: 4rem;
+    height: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+}
+.__blog__single {
+  box-shadow: 0 0px 13px 0px rgba(0, 9, 68, 0.122);
+
+  .blog__img__box {
+    img {
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+  ._auther_and_time {
+    border-left: 3px solid var(--primary);
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.__blog__article__ {
+  border-right: 1px solid rgb(222, 222, 222);
+
+  .topic__box {
+    border-left: 4px solid var(--primary);
+    background: #f1f1ff;
+    padding: 1.3rem 1.5rem;
+    ul {
+      margin: 0;
+      padding: 0;
+      padding-left: 0.5rem;
+      li {
+        display: flex;
+        list-style: none;
+        margin-top: 0.5rem;
+        a {
+          color: rgb(12, 12, 12);
+          text-decoration: underline;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.__blog__side__li {
+  a {
+    text-decoration: underline;
+    text-decoration-color: gray;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/*
+
+  -------------------------- blogs ----------------------------
+
+*/
+
+/*
+
+  -------------------------- Service ----------------------------
+
+*/
+
+.__our__service {
+  @include UseBg2();
+}
+.__our__service__single {
+  border: 1px solid var(--primary);
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 0 5px 2px #e3e3e3;
+  transition: 0.2s;
+  &:hover {
+    box-shadow: 0 0 8px 3px #f5f5f5;
+  }
+}
+.__teach__col {
+  background: var(--primary);
+}
+.teach__details__col {
+  box-shadow: 4px 1px 9px 0px #e3e3e3;
+  padding: 1rem;
+}
+
+.service__feature__single__box {
+  box-shadow: 0 0 5px 2px #e3e3e3;
+}
+
+/*
+
+  -------------------------- Service ----------------------------
+
+*/
+
+/*
+
+  -------------------------- Contact us ----------------------------
+
+*/
+
+.__countact__us__sector {
+  .__coutry__collapse {
+    padding: 0.8em 0.3em;
+    z-index: 10;
+    a {
+      color: rgb(4, 4, 4);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .__img__display {
+    @include UseBg2();
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    z-index: -1;
+    opacity: 0.48;
+  }
+  .ant-collapse-header-text {
+    font-size: 1.15rem;
+    color: rgb(24, 20, 54);
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .ant-collapse-item-active {
+    .__img__display {
+      height: auto !important;
+    }
+  }
+}
+
+/*
+
+  -------------------------- Contact us ----------------------------
+
+*/
+
+/*
+
+  -------------------------- industry ----------------------------
+
+*/
+
+.__industry__alj {
+  svg {
+    animation: changeColor 5s infinite;
+  }
+}
+@keyframes changeColor {
+  25% {
+    color: rgb(228, 0, 213);
+  }
+  50% {
+    color: var(--primary);
+  }
+  75% {
+    color: rgb(223, 0, 78);
+  }
+  75% {
+    color: rgb(39, 39, 39);
+  }
+}
+/*
+
+  -------------------------- industry ----------------------------
+
+*/
